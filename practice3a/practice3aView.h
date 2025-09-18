@@ -1,19 +1,19 @@
 ﻿
-// practice1aView.h: Cpractice1aView 클래스의 인터페이스
+// practice3aView.h: Cpractice3aView 클래스의 인터페이스
 //
 
 #pragma once
 
 
-class Cpractice1aView : public CView
+class Cpractice3aView : public CView
 {
 protected: // serialization에서만 만들어집니다.
-	Cpractice1aView() noexcept;
-	DECLARE_DYNCREATE(Cpractice1aView)
+	Cpractice3aView() noexcept;
+	DECLARE_DYNCREATE(Cpractice3aView)
 
 // 특성입니다.
 public:
-	Cpractice1aDoc* GetDocument() const;
+	Cpractice3aDoc* GetDocument() const;
 
 // 작업입니다.
 public:
@@ -29,7 +29,7 @@ protected:
 
 // 구현입니다.
 public:
-	virtual ~Cpractice1aView();
+	virtual ~Cpractice3aView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -40,13 +40,10 @@ protected:
 // 생성된 메시지 맵 함수
 protected:
 	DECLARE_MESSAGE_MAP()
-public:
-	CString m_strWindowSize;
-	afx_msg void OnSize(UINT nType, int cx, int cy);
 };
 
-#ifndef _DEBUG  // practice1aView.cpp의 디버그 버전
-inline Cpractice1aDoc* Cpractice1aView::GetDocument() const
-   { return reinterpret_cast<Cpractice1aDoc*>(m_pDocument); }
+#ifndef _DEBUG  // practice3aView.cpp의 디버그 버전
+inline Cpractice3aDoc* Cpractice3aView::GetDocument() const
+   { return reinterpret_cast<Cpractice3aDoc*>(m_pDocument); }
 #endif
 

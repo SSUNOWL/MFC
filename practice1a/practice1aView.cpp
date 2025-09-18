@@ -27,6 +27,7 @@ BEGIN_MESSAGE_MAP(Cpractice1aView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 // Cpractice1aView 생성/소멸
@@ -51,13 +52,14 @@ BOOL Cpractice1aView::PreCreateWindow(CREATESTRUCT& cs)
 
 // Cpractice1aView 그리기
 
-void Cpractice1aView::OnDraw(CDC* /*pDC*/)
+void Cpractice1aView::OnDraw(CDC* pDC)
 {
 	Cpractice1aDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
 
+	pDC->TextOut(10, 10, m_strWindowSize);
 	// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
 }
 
@@ -103,3 +105,13 @@ Cpractice1aDoc* Cpractice1aView::GetDocument() const // 디버그되지 않은 �
 
 
 // Cpractice1aView 메시지 처리기
+
+void Cpractice1aView::OnSize(UINT nType, int cx, int cy)
+{
+	CView::OnSize(nType, cx, cy);
+
+	m_strWindowSize.Format(_T("size %d %d"), cx, cy);
+
+	Invalidate();
+	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+}
