@@ -151,13 +151,16 @@ void Cproject3aView::OnLButtonDown(UINT nFlags, CPoint point)
 void Cproject3aView::OnRButtonDown(UINT nFlags, CPoint point)
 {
 	CView::OnRButtonDown(nFlags, point);
-	AfxMessageBox()
-	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
-	m_bTimerState = 1;
-	m_bTimerInit = TRUE;
-	m_strTimer = "00: 00. 00";
-	Invalidate();
-	m_arrRecord.RemoveAll();
+	int ret = AfxMessageBox(_T("초기화하시겠습니까?"), MB_YESNO | MB_ICONINFORMATION);
+	if (ret == IDYES) {
+		// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+		m_bTimerState = 1;
+		m_bTimerInit = TRUE;
+		m_strTimer = "00: 00. 00";
+		Invalidate();
+		m_arrRecord.RemoveAll();
+		KillTimer(0);
+	}
 }
 
 void Cproject3aView::OnTimer(UINT_PTR nIDEvent)
