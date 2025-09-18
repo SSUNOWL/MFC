@@ -40,6 +40,17 @@ protected:
 // 생성된 메시지 맵 함수
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	bool m_bTimerRun;
+	bool m_bTimerType;
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+//	afx_msg void OnDestroy();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	CString m_strTimer;
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+//	afx_msg void OnNcRButtonDown(UINT nHitTest, CPoint point);
+	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnDestroy();
 };
 
 #ifndef _DEBUG  // project3aView.cpp의 디버그 버전
