@@ -27,6 +27,9 @@ BEGIN_MESSAGE_MAP(Cproject3aView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_WM_CREATE()
+	ON_WM_DESTROY()
+	ON_WM_LBUTTONDBLCLK()
 END_MESSAGE_MAP()
 
 // Cproject3aView 생성/소멸
@@ -103,3 +106,29 @@ Cproject3aDoc* Cproject3aView::GetDocument() const // 디버그되지 않은 버
 
 
 // Cproject3aView 메시지 처리기
+
+int Cproject3aView::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CView::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	AfxMessageBox(_T("박스 생성"), MB_OK | MB_ICONINFORMATION);
+	// TODO:  여기에 특수화된 작성 코드를 추가합니다.
+
+	return 0;
+}
+
+void Cproject3aView::OnDestroy()
+{
+	CView::OnDestroy();
+	AfxMessageBox(_T("박스 삭제"), MB_OK | MB_ICONINFORMATION);
+
+	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+}
+
+void Cproject3aView::OnLButtonDblClk(UINT nFlags, CPoint point)
+{	
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	AfxMessageBox(_T("더블클릭"), MB_OK | MB_ICONINFORMATION);
+
+	CView::OnLButtonDblClk(nFlags, point);
+}
