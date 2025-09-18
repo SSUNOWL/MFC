@@ -1,5 +1,5 @@
 ﻿
-// practice3aView.cpp: Cpractice3aView 클래스의 구현
+// project3aView.cpp: Cproject3aView 클래스의 구현
 //
 
 #include "pch.h"
@@ -7,41 +7,41 @@
 // SHARED_HANDLERS는 미리 보기, 축소판 그림 및 검색 필터 처리기를 구현하는 ATL 프로젝트에서 정의할 수 있으며
 // 해당 프로젝트와 문서 코드를 공유하도록 해 줍니다.
 #ifndef SHARED_HANDLERS
-#include "practice3a.h"
+#include "project3a.h"
 #endif
 
-#include "practice3aDoc.h"
-#include "practice3aView.h"
+#include "project3aDoc.h"
+#include "project3aView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// Cpractice3aView
+// Cproject3aView
 
-IMPLEMENT_DYNCREATE(Cpractice3aView, CView)
+IMPLEMENT_DYNCREATE(Cproject3aView, CView)
 
-BEGIN_MESSAGE_MAP(Cpractice3aView, CView)
+BEGIN_MESSAGE_MAP(Cproject3aView, CView)
 	// 표준 인쇄 명령입니다.
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
-// Cpractice3aView 생성/소멸
+// Cproject3aView 생성/소멸
 
-Cpractice3aView::Cpractice3aView() noexcept
+Cproject3aView::Cproject3aView() noexcept
 {
 	// TODO: 여기에 생성 코드를 추가합니다.
 
 }
 
-Cpractice3aView::~Cpractice3aView()
+Cproject3aView::~Cproject3aView()
 {
 }
 
-BOOL Cpractice3aView::PreCreateWindow(CREATESTRUCT& cs)
+BOOL Cproject3aView::PreCreateWindow(CREATESTRUCT& cs)
 {
 	// TODO: CREATESTRUCT cs를 수정하여 여기에서
 	//  Window 클래스 또는 스타일을 수정합니다.
@@ -49,11 +49,11 @@ BOOL Cpractice3aView::PreCreateWindow(CREATESTRUCT& cs)
 	return CView::PreCreateWindow(cs);
 }
 
-// Cpractice3aView 그리기
+// Cproject3aView 그리기
 
-void Cpractice3aView::OnDraw(CDC* /*pDC*/)
+void Cproject3aView::OnDraw(CDC* /*pDC*/)
 {
-	Cpractice3aDoc* pDoc = GetDocument();
+	Cproject3aDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
@@ -62,44 +62,44 @@ void Cpractice3aView::OnDraw(CDC* /*pDC*/)
 }
 
 
-// Cpractice3aView 인쇄
+// Cproject3aView 인쇄
 
-BOOL Cpractice3aView::OnPreparePrinting(CPrintInfo* pInfo)
+BOOL Cproject3aView::OnPreparePrinting(CPrintInfo* pInfo)
 {
 	// 기본적인 준비
 	return DoPreparePrinting(pInfo);
 }
 
-void Cpractice3aView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+void Cproject3aView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
 	// TODO: 인쇄하기 전에 추가 초기화 작업을 추가합니다.
 }
 
-void Cpractice3aView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+void Cproject3aView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
 	// TODO: 인쇄 후 정리 작업을 추가합니다.
 }
 
 
-// Cpractice3aView 진단
+// Cproject3aView 진단
 
 #ifdef _DEBUG
-void Cpractice3aView::AssertValid() const
+void Cproject3aView::AssertValid() const
 {
 	CView::AssertValid();
 }
 
-void Cpractice3aView::Dump(CDumpContext& dc) const
+void Cproject3aView::Dump(CDumpContext& dc) const
 {
 	CView::Dump(dc);
 }
 
-Cpractice3aDoc* Cpractice3aView::GetDocument() const // 디버그되지 않은 버전은 인라인으로 지정됩니다.
+Cproject3aDoc* Cproject3aView::GetDocument() const // 디버그되지 않은 버전은 인라인으로 지정됩니다.
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Cpractice3aDoc)));
-	return (Cpractice3aDoc*)m_pDocument;
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Cproject3aDoc)));
+	return (Cproject3aDoc*)m_pDocument;
 }
 #endif //_DEBUG
 
 
-// Cpractice3aView 메시지 처리기
+// Cproject3aView 메시지 처리기

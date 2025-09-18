@@ -1,26 +1,26 @@
 ﻿
-// practice3a.cpp: 애플리케이션에 대한 클래스 동작을 정의합니다.
+// project3a.cpp: 애플리케이션에 대한 클래스 동작을 정의합니다.
 //
 
 #include "pch.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "practice3a.h"
+#include "project3a.h"
 #include "MainFrm.h"
 
-#include "practice3aDoc.h"
-#include "practice3aView.h"
+#include "project3aDoc.h"
+#include "project3aView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// Cpractice3aApp
+// Cproject3aApp
 
-BEGIN_MESSAGE_MAP(Cpractice3aApp, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &Cpractice3aApp::OnAppAbout)
+BEGIN_MESSAGE_MAP(Cproject3aApp, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &Cproject3aApp::OnAppAbout)
 	// 표준 파일을 기초로 하는 문서 명령입니다.
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
@@ -29,9 +29,9 @@ BEGIN_MESSAGE_MAP(Cpractice3aApp, CWinApp)
 END_MESSAGE_MAP()
 
 
-// Cpractice3aApp 생성
+// Cproject3aApp 생성
 
-Cpractice3aApp::Cpractice3aApp() noexcept
+Cproject3aApp::Cproject3aApp() noexcept
 {
 
 	// 다시 시작 관리자 지원
@@ -45,20 +45,20 @@ Cpractice3aApp::Cpractice3aApp() noexcept
 
 	// TODO: 아래 애플리케이션 ID 문자열을 고유 ID 문자열로 바꾸십시오(권장).
 	// 문자열에 대한 서식: CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("practice3a.AppID.NoVersion"));
+	SetAppID(_T("project3a.AppID.NoVersion"));
 
 	// TODO: 여기에 생성 코드를 추가합니다.
 	// InitInstance에 모든 중요한 초기화 작업을 배치합니다.
 }
 
-// 유일한 Cpractice3aApp 개체입니다.
+// 유일한 Cproject3aApp 개체입니다.
 
-Cpractice3aApp theApp;
+Cproject3aApp theApp;
 
 
-// Cpractice3aApp 초기화
+// Cproject3aApp 초기화
 
-BOOL Cpractice3aApp::InitInstance()
+BOOL Cproject3aApp::InitInstance()
 {
 	// 애플리케이션 매니페스트가 ComCtl32.dll 버전 6 이상을 사용하여 비주얼 스타일을
 	// 사용하도록 지정하는 경우, Windows XP 상에서 반드시 InitCommonControlsEx()가 필요합니다. 
@@ -103,9 +103,9 @@ BOOL Cpractice3aApp::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(Cpractice3aDoc),
+		RUNTIME_CLASS(Cproject3aDoc),
 		RUNTIME_CLASS(CMainFrame),       // 주 SDI 프레임 창입니다.
-		RUNTIME_CLASS(Cpractice3aView));
+		RUNTIME_CLASS(Cproject3aView));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -128,7 +128,7 @@ BOOL Cpractice3aApp::InitInstance()
 	return TRUE;
 }
 
-int Cpractice3aApp::ExitInstance()
+int Cproject3aApp::ExitInstance()
 {
 	//TODO: 추가한 추가 리소스를 처리합니다.
 	AfxOleTerm(FALSE);
@@ -136,7 +136,7 @@ int Cpractice3aApp::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
-// Cpractice3aApp 메시지 처리기
+// Cproject3aApp 메시지 처리기
 
 
 // 응용 프로그램 정보에 사용되는 CAboutDlg 대화 상자입니다.
@@ -172,13 +172,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 대화 상자를 실행하기 위한 응용 프로그램 명령입니다.
-void Cpractice3aApp::OnAppAbout()
+void Cproject3aApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// Cpractice3aApp 메시지 처리기
+// Cproject3aApp 메시지 처리기
 
 
 

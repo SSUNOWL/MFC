@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{59F6B8F6-C958-CA62-82DD-4195A67A2245}</ProjectGuid>
+    <ProjectGuid>{BD66AE92-F4E2-EFBA-3FCB-4DBFAC452597}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>practice1a</RootNamespace>
+    <RootNamespace>project3a</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -186,9 +186,9 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="practice1a.h" />
-    <ClInclude Include="practice1aDoc.h" />
-    <ClInclude Include="practice1aView.h" />
+    <ClInclude Include="project3a.h" />
+    <ClInclude Include="project3aDoc.h" />
+    <ClInclude Include="project3aView.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -200,19 +200,19 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="practice1a.cpp" />
-    <ClCompile Include="practice1aDoc.cpp" />
-    <ClCompile Include="practice1aView.cpp" />
+    <ClCompile Include="project3a.cpp" />
+    <ClCompile Include="project3aDoc.cpp" />
+    <ClCompile Include="project3aView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="practice1a.rc" />
+    <ResourceCompile Include="project3a.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\practice1a.rc2" />
+    <None Include="res\project3a.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\practice1a.ico" />
-    <Image Include="res\practice1aDoc.ico" />
+    <Image Include="res\project3a.ico" />
+    <Image Include="res\project3aDoc.ico" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

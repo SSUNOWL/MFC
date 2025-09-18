@@ -1,5 +1,5 @@
 ﻿
-// practice1aDoc.cpp: Cpractice1aDoc 클래스의 구현
+// project3aDoc.cpp: Cproject3aDoc 클래스의 구현
 //
 
 #include "pch.h"
@@ -7,10 +7,10 @@
 // SHARED_HANDLERS는 미리 보기, 축소판 그림 및 검색 필터 처리기를 구현하는 ATL 프로젝트에서 정의할 수 있으며
 // 해당 프로젝트와 문서 코드를 공유하도록 해 줍니다.
 #ifndef SHARED_HANDLERS
-#include "practice1a.h"
+#include "project3a.h"
 #endif
 
-#include "practice1aDoc.h"
+#include "project3aDoc.h"
 
 #include <propkey.h>
 
@@ -18,27 +18,27 @@
 #define new DEBUG_NEW
 #endif
 
-// Cpractice1aDoc
+// Cproject3aDoc
 
-IMPLEMENT_DYNCREATE(Cpractice1aDoc, CDocument)
+IMPLEMENT_DYNCREATE(Cproject3aDoc, CDocument)
 
-BEGIN_MESSAGE_MAP(Cpractice1aDoc, CDocument)
+BEGIN_MESSAGE_MAP(Cproject3aDoc, CDocument)
 END_MESSAGE_MAP()
 
 
-// Cpractice1aDoc 생성/소멸
+// Cproject3aDoc 생성/소멸
 
-Cpractice1aDoc::Cpractice1aDoc() noexcept
+Cproject3aDoc::Cproject3aDoc() noexcept
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 
 }
 
-Cpractice1aDoc::~Cpractice1aDoc()
+Cproject3aDoc::~Cproject3aDoc()
 {
 }
 
-BOOL Cpractice1aDoc::OnNewDocument()
+BOOL Cproject3aDoc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -52,9 +52,9 @@ BOOL Cpractice1aDoc::OnNewDocument()
 
 
 
-// Cpractice1aDoc serialization
+// Cproject3aDoc serialization
 
-void Cpractice1aDoc::Serialize(CArchive& ar)
+void Cproject3aDoc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -69,7 +69,7 @@ void Cpractice1aDoc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // 축소판 그림을 지원합니다.
-void Cpractice1aDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void Cproject3aDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// 문서의 데이터를 그리려면 이 코드를 수정하십시오.
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -90,7 +90,7 @@ void Cpractice1aDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 검색 처리기를 지원합니다.
-void Cpractice1aDoc::InitializeSearchContent()
+void Cproject3aDoc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// 문서의 데이터에서 검색 콘텐츠를 설정합니다.
@@ -100,7 +100,7 @@ void Cpractice1aDoc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void Cpractice1aDoc::SetSearchContent(const CString& value)
+void Cproject3aDoc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -120,19 +120,19 @@ void Cpractice1aDoc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// Cpractice1aDoc 진단
+// Cproject3aDoc 진단
 
 #ifdef _DEBUG
-void Cpractice1aDoc::AssertValid() const
+void Cproject3aDoc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void Cpractice1aDoc::Dump(CDumpContext& dc) const
+void Cproject3aDoc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// Cpractice1aDoc 명령
+// Cproject3aDoc 명령

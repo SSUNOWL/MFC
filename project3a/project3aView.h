@@ -1,19 +1,19 @@
 ﻿
-// practice3aView.h: Cpractice3aView 클래스의 인터페이스
+// project3aView.h: Cproject3aView 클래스의 인터페이스
 //
 
 #pragma once
 
 
-class Cpractice3aView : public CView
+class Cproject3aView : public CView
 {
 protected: // serialization에서만 만들어집니다.
-	Cpractice3aView() noexcept;
-	DECLARE_DYNCREATE(Cpractice3aView)
+	Cproject3aView() noexcept;
+	DECLARE_DYNCREATE(Cproject3aView)
 
 // 특성입니다.
 public:
-	Cpractice3aDoc* GetDocument() const;
+	Cproject3aDoc* GetDocument() const;
 
 // 작업입니다.
 public:
@@ -29,7 +29,7 @@ protected:
 
 // 구현입니다.
 public:
-	virtual ~Cpractice3aView();
+	virtual ~Cproject3aView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -42,8 +42,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 };
 
-#ifndef _DEBUG  // practice3aView.cpp의 디버그 버전
-inline Cpractice3aDoc* Cpractice3aView::GetDocument() const
-   { return reinterpret_cast<Cpractice3aDoc*>(m_pDocument); }
+#ifndef _DEBUG  // project3aView.cpp의 디버그 버전
+inline Cproject3aDoc* Cproject3aView::GetDocument() const
+   { return reinterpret_cast<Cproject3aDoc*>(m_pDocument); }
 #endif
 

@@ -1,5 +1,5 @@
 ﻿
-// practice3a.h: practice3a 애플리케이션의 기본 헤더 파일
+// project3a.h: project3a 애플리케이션의 기본 헤더 파일
 //
 #pragma once
 
@@ -10,14 +10,14 @@
 #include "resource.h"       // 주 기호입니다.
 
 
-// Cpractice3aApp:
-// 이 클래스의 구현에 대해서는 practice3a.cpp을(를) 참조하세요.
+// Cproject3aApp:
+// 이 클래스의 구현에 대해서는 project3a.cpp을(를) 참조하세요.
 //
 
-class Cpractice3aApp : public CWinApp
+class Cproject3aApp : public CWinApp
 {
 public:
-	Cpractice3aApp() noexcept;
+	Cproject3aApp() noexcept;
 
 
 // 재정의입니다.
@@ -30,4 +30,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern Cpractice3aApp theApp;
+extern Cproject3aApp theApp;

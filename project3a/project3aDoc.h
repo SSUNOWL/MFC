@@ -1,16 +1,16 @@
 ﻿
-// practice3aDoc.h: Cpractice3aDoc 클래스의 인터페이스
+// project3aDoc.h: Cproject3aDoc 클래스의 인터페이스
 //
 
 
 #pragma once
 
 
-class Cpractice3aDoc : public CDocument
+class Cproject3aDoc : public CDocument
 {
 protected: // serialization에서만 만들어집니다.
-	Cpractice3aDoc() noexcept;
-	DECLARE_DYNCREATE(Cpractice3aDoc)
+	Cproject3aDoc() noexcept;
+	DECLARE_DYNCREATE(Cproject3aDoc)
 
 // 특성입니다.
 public:
@@ -29,7 +29,7 @@ public:
 
 // 구현입니다.
 public:
-	virtual ~Cpractice3aDoc();
+	virtual ~Cproject3aDoc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

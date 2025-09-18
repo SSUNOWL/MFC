@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="practice3a.h">
+    <ClInclude Include="project3a.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -27,10 +27,10 @@
     <ClInclude Include="MainFrm.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="practice3aDoc.h">
+    <ClInclude Include="project3aDoc.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="practice3aView.h">
+    <ClInclude Include="project3aView.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -41,16 +41,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="practice3a.cpp">
+    <ClCompile Include="project3a.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="practice3aDoc.cpp">
+    <ClCompile Include="project3aDoc.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="practice3aView.cpp">
+    <ClCompile Include="project3aView.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -58,20 +58,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="practice3a.rc">
+    <ResourceCompile Include="project3a.rc">
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\practice3a.rc2">
+    <None Include="res\project3a.rc2">
       <Filter>리소스 파일</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\practice3aDoc.ico">
+    <Image Include="res\project3aDoc.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\practice3a.ico">
+    <Image Include="res\project3a.ico">
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

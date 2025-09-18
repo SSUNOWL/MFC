@@ -1,11 +1,11 @@
 ﻿//{{NO_DEPENDENCIES}}
 // Microsoft Visual C++에서 생성한 포함 파일입니다.
-// practice1a.rc에서 사용
+// project3a.rc에서 사용
 //
 #define IDD_ABOUTBOX				100
 #define IDP_OLE_INIT_FAILED			100
 #define IDR_MAINFRAME				128
-#define IDR_practice1aTYPE				130
+#define IDR_project3aTYPE				130
 
 // 다음은 새 개체에 사용할 기본값입니다.
 //
