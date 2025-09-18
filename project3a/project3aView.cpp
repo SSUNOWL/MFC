@@ -111,7 +111,7 @@ int Cproject3aView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CView::OnCreate(lpCreateStruct) == -1)
 		return -1;
-	AfxMessageBox(_T("박스 생성"), MB_OK | MB_ICONINFORMATION);
+	AfxMessageBox(_T("윈도우가 생성되었습니다."), MB_OKCANCEL | MB_ICONINFORMATION);
 	// TODO:  여기에 특수화된 작성 코드를 추가합니다.
 
 	return 0;
@@ -120,7 +120,7 @@ int Cproject3aView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 void Cproject3aView::OnDestroy()
 {
 	CView::OnDestroy();
-	AfxMessageBox(_T("박스 삭제"), MB_OK | MB_ICONINFORMATION);
+	AfxMessageBox(_T("윈도우가 종료되었습니다."), MB_OK | MB_ICONINFORMATION);
 
 	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
 }
@@ -128,7 +128,7 @@ void Cproject3aView::OnDestroy()
 void Cproject3aView::OnLButtonDblClk(UINT nFlags, CPoint point)
 {	
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
-	AfxMessageBox(_T("더블클릭"), MB_OK | MB_ICONINFORMATION);
+	AfxMessageBox(_T("왼쪽 마우스 버튼을 더블클릭하였습니까?"), MB_YESNO| MB_ICONQUESTION);
 
 	CView::OnLButtonDblClk(nFlags, point);
 }
