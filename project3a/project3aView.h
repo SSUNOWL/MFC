@@ -40,6 +40,19 @@ protected:
 // 생성된 메시지 맵 함수
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	int m_bTimerState;
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+	CString m_strTimer;
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	SYSTEMTIME m_ctTimerStart;
+	bool m_bTimerInit;
+	SYSTEMTIME m_ctTimerStop;
+	long long delayed;
+	CStringArray m_arrRecord;
+	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+	int count;
 };
 
 #ifndef _DEBUG  // project3aView.cpp의 디버그 버전
